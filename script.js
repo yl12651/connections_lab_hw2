@@ -16,7 +16,7 @@ document.addEventListener('click', () => {
         // Second click animation
         console.log(`Animation 1 triggered`);
         const mainCharacter = document.querySelector('.main-character');
-        mainCharacter.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+        mainCharacter.style.transition = 'transform 0.38s ease, opacity 0.38s ease';
         mainCharacter.style.transform = 'translateX(-50%) translateY(0)';
         mainCharacter.style.opacity = '1';
     } else if (clickState === 2) {
@@ -41,7 +41,7 @@ document.addEventListener('click', () => {
         errorImage.style.transition = 'opacity 1s ease';
         errorImage.style.opacity = '1';
         setTimeout(() => {
-                errorImage.style.animation = 'breathing 2s infinite';
+                errorImage.style.animation = 'breathing 3.8s infinite';
             }, 1000);
     }
 
