@@ -12,11 +12,13 @@ document.addEventListener('click', () => {
         });
         document.querySelector('.mask-top').style.transform = 'translateY(-100%)';
         document.querySelector('.mask-bottom').style.transform = 'translateY(100%)';
+        document.querySelector('.text-overlay').style.transition = 'transform 1s ease';
+        document.querySelector('.text-overlay').style.transform = 'translateY(300%)';
     } else if (clickState === 1) {
         // Second click animation
         console.log(`Animation 1 triggered`);
         const mainCharacter = document.querySelector('.main-character');
-        mainCharacter.style.transition = 'transform 0.38s ease, opacity 0.38s ease';
+        mainCharacter.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
         mainCharacter.style.transform = 'translateX(-50%) translateY(0)';
         mainCharacter.style.opacity = '1';
     } else if (clickState === 2) {
@@ -32,7 +34,7 @@ document.addEventListener('click', () => {
             setTimeout(() => {
                 string.style.maskImage = 'none';
                 string.style.webkitMaskImage = 'none';
-                }, 1000);
+            }, 1000);
         });
     } else if (clickState === 3) {
         // Fourth click animation
@@ -40,9 +42,7 @@ document.addEventListener('click', () => {
         const errorImage = document.querySelector('.error');
         errorImage.style.transition = 'opacity 1s ease';
         errorImage.style.opacity = '1';
-        setTimeout(() => {
-                errorImage.style.animation = 'breathing 3.8s infinite';
-            }, 1000);
+        errorImage.style.animation = 'breathing 2s infinite';
     }
 
     // Set timeout to prevent further clicks for 3 seconds
